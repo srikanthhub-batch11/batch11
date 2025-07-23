@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+      name:source_model
+      database:{{('SOURCE_DATA')}}
+      schema:RAW_DATA
+      tables:
+        - name: CUSTOMER
