@@ -1,5 +1,9 @@
-{{ config(materialized='table') }}
-
+{{ config(
+    materialized='table',
+    pre_hook=[
+                "SELECT C_CUSTOMER_SK FROM {{ this }} WHERE C_CUSTOMER_SK < 0" 
+                ]
+) }}
 WITH sample_table AS (
     SELECT 
         C_CUSTOMER_SK,
