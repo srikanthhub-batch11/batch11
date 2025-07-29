@@ -3,18 +3,6 @@ version: 2
 sources:
   - name: source_model
     database: "{{ 'SOURCE_DATA' }}"
-    schema: "{{ 'RAW_DATA' }}"
+    schema: "{{'RAW_DATA'}}"
     tables:
       - name: CUSTOMER
-      - name: PART_INFO
-      - name: ORDER_TABLE
-      - name: CHECK_TABLE
-        tags: ["run_only_me", "done"]
-        columns:
-          - name: C_BIRTH_COUNTRY
-            tests:
-              - not_null
-              - relationships:
-                  to: ref('customerfinal')
-                  field: C_CUSTOMER_SK
-      - name: PRE_TABLE

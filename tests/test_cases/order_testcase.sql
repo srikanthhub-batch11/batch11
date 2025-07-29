@@ -1,1 +1,0 @@
-SELECT  *   FROM {{ref('customerfinal')}}  WHERE  INITCAP(FULL_NAME) 
