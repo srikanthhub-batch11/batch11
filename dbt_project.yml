@@ -40,7 +40,3 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
-
-snapshots:
-      +target_database: SNAP_DB
-      +target_schema: SNAP_SCHEMA
